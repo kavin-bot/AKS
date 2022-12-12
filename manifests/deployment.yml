@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kimageweb2 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kimageweb2
+  template:
+    metadata:
+      labels:
+        app: kimageweb2 
+    spec:
+      containers:
+        - name: kimageweb2 
+          image: webdevops.azurecr.io/kimageweb2
+          ports:
+          - containerPort: 80
