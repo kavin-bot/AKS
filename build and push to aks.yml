@@ -12,7 +12,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'ea4fb0bc-7647-47d6-9a9c-389afa7537ef'
-  imageRepository: 'kweb1'
+  imageRepository: 'kweb2'
   containerRegistry: 'webdevops.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -53,7 +53,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'kavinbotAKS.default'
+    environment: 'build and push AKS.default'
     strategy:
       runOnce:
         deploy:
