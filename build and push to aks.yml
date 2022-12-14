@@ -53,7 +53,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'build and push AKS.default'
+    environment: 'kavinbotAKS.default'
     strategy:
       runOnce:
         deploy:
